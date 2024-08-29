@@ -9,7 +9,7 @@ import "proto/bank/type/transaction.proto";
 option go_package = "github.com/fajaramaulana/go-grpc-micro-bank-proto/protogen/go/bank";
 
 service BankService {
-    rpc GetCurrentBalance (CurrentBalanceRequest) returns (CurrentBalanceResponse);
-    rpc FetchExchangeRates (ExchangeRateRequest) returns (ExchangeRateResponse);
-    rpc SummarizeTransactions (stream Transaction) returns (TransactionSummary);
+    rpc GetCurrentBalance (CurrentBalanceRequest) returns (CurrentBalanceResponse) {}
+    rpc FetchExchangeRates (ExchangeRateRequest) returns (ExchangeRateResponse) {}
+    rpc SummarizeTransactions (stream Transaction) returns (TransactionSummary) {}
 }
