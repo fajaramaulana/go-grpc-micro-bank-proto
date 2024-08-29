@@ -18,6 +18,7 @@ message Transaction {
     TransactionType type = 2 [json_name = "type"];
     double amount = 3 [json_name = "amount"];
     google.type.DateTime timestamp = 4;
+    string notes = 16;
 }
 
 
