@@ -11,5 +11,5 @@ option go_package = "github.com/fajaramaulana/go-grpc-micro-bank-proto/protogen/
 service BankService {
     rpc GetCurrentBalance (CurrentBalanceRequest) returns (CurrentBalanceResponse);
     rpc FetchExchangeRates (ExchangeRateRequest) returns (ExchangeRateResponse);
-    rpc SummarizeTransactions (stream Transaction) returns (TransactionSummary)
+    rpc SummarizeTransactions (stream Transaction) returns (TransactionSummary);
 }
