@@ -9,6 +9,7 @@ message TransferRequest {
     string account_number_reciever = 2 [json_name = "account_number_reciever"];
     string currency = 3 [json_name="currency"];
     double amount = 4 [json_name="amount"];
+    string notes = 5 [json_name="notes"];
 }
 
 message TransferResponse {
