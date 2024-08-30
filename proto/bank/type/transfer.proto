@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package bank;
+
+option go_package = "github.com/fajaramaulana/go-grpc-micro-bank-proto/protogen/go/bank";
+
+message TransferRequest {
+    string account_number_sender = 1 [json_name = "account_number_sender"];
+    string account_number_reciever = 2 [json_name = "account_number_reciever"];
+    string currency = 3 [json_name="currency"];
+    double amount = 4 [json_name="amount"];
+}
+
+message TransferResponse {
+    string account_number_sender = 1 [json_name = "account_number_sender"];
+    string account_number_reciever = 2 [json_name = "account_number_reciever"];
+    string currency = 3 [json_name="currency"];
+    double amount = 4 [json_name="amount"];
+    string status = 5 [json_name="success"];
+    string timestamp = 6 [json_name="timestamp"];
+}

@@ -20,6 +20,7 @@ protoc-go:
   	bank/service.proto \
   	bank/type/account.proto \
   	bank/type/exchange.proto \
+  	bank/type/transfer.proto \
   	bank/type/transaction.proto
 
 .PHONY: build
