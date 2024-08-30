@@ -13,9 +13,14 @@ endif
 
 .PHONY: protoc-go
 protoc-go:
-	protoc --go_opt=module=${GO_MODULE} --go_out=. \
-	--go-grpc_opt=module=${GO_MODULE} --go-grpc_out=. \
-	./proto/bank/*.proto ./proto/bank/type/*.proto
+	rm -f protogen/go/bank/*.go
+	protoc --proto_path=proto \
+ 	--go_out=. --go_opt=module=${GO_MODULE} \
+  	--go-grpc_out=. --go-grpc_opt=module=${GO_MODULE} \
+  	bank/service.proto \
+  	bank/type/account.proto \
+  	bank/type/exchange.proto \
+  	bank/type/transaction.proto
 
 .PHONY: build
 build: clean protoc-go

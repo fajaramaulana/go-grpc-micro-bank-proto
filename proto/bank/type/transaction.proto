@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package bank;
 
-import "proto/google/type/datetime.proto";
+import "google/type/datetime.proto";
 
 option go_package = "github.com/fajaramaulana/go-grpc-micro-bank-proto/protogen/go/bank";
 
