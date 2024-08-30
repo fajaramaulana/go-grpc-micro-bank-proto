@@ -2,7 +2,14 @@ syntax = "proto3";
 
 package bank;
 
+import "google/type/datetime.proto";
+
 option go_package = "github.com/fajaramaulana/go-grpc-micro-bank-proto/protogen/go/bank";
+enum TransferStatus {
+    TRANSFER_STATUS_UNSPECIFIED = 0;
+    TRANSFER_STATUS_SUCCESS = 1;
+    TRANSFER_STATUS_FAILED = 2;
+  }
 
 message TransferRequest {
     string account_number_sender = 1 [json_name = "account_number_sender"];
@@ -17,6 +24,6 @@ message TransferResponse {
     string account_number_reciever = 2 [json_name = "account_number_reciever"];
     string currency = 3 [json_name="currency"];
     double amount = 4 [json_name="amount"];
-    string status = 5 [json_name="success"];
-    string timestamp = 6 [json_name="timestamp"];
+    TransferStatus status = 5 [json_name="success"];
+    google.type.DateTime timestamp = 6 [json_name="timestamp"];
 }
