@@ -22,7 +22,7 @@ protoc-go:
   	bank/type/exchange.proto \
   	bank/type/transfer.proto \
   	bank/type/transaction.proto \
-	resiliency/service.proto \
+	resilliency/resilliency.proto \
 
 .PHONY: build
 build: clean protoc-go
